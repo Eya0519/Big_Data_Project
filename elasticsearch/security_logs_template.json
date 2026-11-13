@@ -1,0 +1,27 @@
+{
+  "index_patterns": ["security_logs*"],
+  "template": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "@timestamp":     { "type": "date" },
+        "timestamp":      { "type": "date" },
+        "ip_source":      { "type": "ip" },
+        "utilisateur":    { "type": "keyword" },
+        "type_evenement": { "type": "keyword" },
+        "resultat":       { "type": "keyword" },
+        "niveau":         { "type": "keyword" },
+        "ressource":      { "type": "keyword" },
+        "service":        { "type": "keyword" },
+        "description":    { "type": "text" },
+        "geoip": {
+          "properties": {
+            "location":      { "type": "geo_point" },
+            "country_name":  { "type": "keyword" },
+            "country_code2": { "type": "keyword" }
+          }
+        }
+      }
+    }
+  }
+}
