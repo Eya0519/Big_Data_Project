@@ -1,0 +1,2 @@
+{"timestamp":"2026-11-14T11:00:00","ip_source":"92.63.197.1","utilisateur":"bob","type_evenement":"authentication","resultat":"echec","niveau":"moyen","ressource":"/login","service":"auth-service","description":"json test 1"}
+{"timestamp":"2026-11-14T11:00:30","ip_source":"8.8.8.8","utilisateur":"carol","type_evenement":"firewall","resultat":"succes","niveau":"faible","ressource":"/api/users","service":"firewall","description":"json test 2"}

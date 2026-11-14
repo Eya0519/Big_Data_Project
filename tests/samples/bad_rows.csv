@@ -1,0 +1,4 @@
+timestamp,ip_source,utilisateur,type_evenement,resultat,niveau,ressource,service,description
+2026-11-14T10:00:00,999.1.1.1,admin,authentication,echec,eleve,/login,auth-service,bad ip
+2026-11-14T10:00:20,41.226.10.5,alice
+not-a-date,41.226.10.5,alice,authentication,succes,faible,/login,auth-service,bad date

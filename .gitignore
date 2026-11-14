@@ -5,3 +5,4 @@ data/csv/*
 data/json/*
 !data/csv/.gitkeep
 !data/json/.gitkeep
+data/.tmp/
