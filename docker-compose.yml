@@ -44,6 +44,7 @@ services:
       - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
       - ./data:/data:ro
+      - logstashdata:/usr/share/logstash/data 
     networks: [elk-net]
     depends_on:
       elasticsearch: {condition: service_healthy}
@@ -91,6 +92,7 @@ services:
       MONGO_URI: mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongo:27017/?authSource=admin
       REDIS_HOST: redis
       REDIS_PASSWORD: ${REDIS_PASSWORD}
+      UPLOAD_DIR: /data
     ports: ["8000:8000"]
     volumes: [./data:/data]          # read-write: Flask will save uploads here in week 4
     networks: [elk-net]
@@ -111,3 +113,4 @@ networks:
 volumes:
   esdata:
   mongodata:
+  logstashdata:

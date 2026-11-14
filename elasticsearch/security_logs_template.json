@@ -13,6 +13,7 @@
         "niveau":         { "type": "keyword" },
         "ressource":      { "type": "keyword" },
         "service":        { "type": "keyword" },
+        "source_file":    { "type": "keyword" },
         "description":    { "type": "text" },
         "geoip": {
           "properties": {
