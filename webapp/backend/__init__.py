@@ -5,7 +5,7 @@ from werkzeug.exceptions import RequestEntityTooLarge
 
 from . import extensions
 from .config import Config
-from .routes import health, search, upload
+from .routes import api, health, search, upload
 
 
 def create_app():
@@ -24,4 +24,5 @@ def create_app():
     app.register_blueprint(health.bp)
     app.register_blueprint(upload.bp)
     app.register_blueprint(search.bp)
+    app.register_blueprint(api.bp)
     return app
